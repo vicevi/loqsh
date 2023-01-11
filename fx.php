@@ -1,8 +1,8 @@
 <?php
     /* connector to db */
     function conn() {
-        $servername = "localhost"; $username = "root"; $password = ""; $dbname = "loqsh";
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $config = parse_ini_file("config.ini");
+        $conn = new mysqli($config["server"], $config["user"], $config["pass"], $config["db"]);
         if($conn->connect_error) { die($conn->connect_error); }
         return $conn;
     }
