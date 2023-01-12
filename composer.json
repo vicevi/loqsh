@@ -1,0 +1,6 @@
+{
+    "require": {
+        "bramus/router": "^1.6",
+        "james-heinrich/getid3": "^1.9"
+    }
+}
